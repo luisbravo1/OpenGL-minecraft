@@ -4,7 +4,8 @@ wolfAtt = {
     "position": (0,0,0),
     "size": (1,1,1),
     "rotation": (0,0,0,0),
-    "color": (0.87, 0.87, 0.87)
+    "color": (0.87, 0.87, 0.87),
+    "texture": "./textures/fur_texture.png"
   },
   "nose": {
     "position": (0,-0.5,1.3),
@@ -56,13 +57,15 @@ steveAtt = {
     "position": (0,1.6,0),
     "size": (0.6,0.6,0.6),
     "rotation": (0,0,0,0),
-    "color": (0.98,0.92,0.81)
+    "color": (0.98,0.92,0.81),
+    # "texture": "./textures/steve_face.png",
   },
   "body": {
     "position": (0,0,0),
     "size": (0.75,1,0.3),
     "rotation": (0,0,0,0),
-    "color": (0.25,0.79,0.96)
+    "color": (0.25,0.79,0.96),
+    # "texture": "./textures/blue_pants.jpeg"
   },
   "left_arm_skin": {
     "position": (-1,0,-0.5),
@@ -88,6 +91,24 @@ steveAtt = {
     "rotation": (-45,0,0,0),
     "color": (0.11, 0.40, 1)
   },
+  "pickaxe_stick": {
+    "position": (1, 0.2, 1.4),
+    "size": (0.1, 1, 0.1),
+    "rotation": (45, 0, 0, 0),
+    "color": (0.5, 0.32, 0)
+  },
+  "pickaxe_stone_o": {
+    "position": (1, 0.9, 1.6),
+    "size": (0.1, 0.6, 0.1),
+    "rotation": (90, 0, 0, 0),
+    "color": (0.45, 0.45, 0.45)
+  },
+  "pickaxe_stone_s": {
+    "position": (1, 0.3, 2.2),
+    "size": (0.1, 0.6, 0.1),
+    "rotation": (0, 0, 0, 0),
+    "color": (0.45, 0.45, 0.45)
+  }
 }
 
 # Attributes for Tree Model
@@ -194,7 +215,8 @@ pigAtt = {
     "position": (0,0,0),
     "size": (0.6,0.6,0.6),
     "rotation": (0,0,0,0),
-    "color": (0.98,0.63, 0.58)
+    "color": (0.98,0.63, 0.58),
+    # "texture": "./textures/pink_text.jpeg"
   },
   "nose" : {
     "position": (0,-0.2,0.7),
