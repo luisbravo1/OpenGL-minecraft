@@ -16,7 +16,8 @@ wolfAtt = {
         "position": (0, 0.1, -2),
         "size": (1.2, 1, 2),
         "rotation": (0, 0, 0, 0),
-        "color": (0.87, 0.87, 0.87)
+        "color": (0.87, 0.87, 0.87),
+        "texture": True
     },
     "tail": {
         "position": (0, -0.2, -4),
@@ -56,15 +57,13 @@ steveAtt = {
         "position": (0, 1.6, 0),
         "size": (0.6, 0.6, 0.6),
         "rotation": (0, 0, 0, 0),
-        "color": (0.98, 0.92, 0.81),
-        "texture": "./textures/steve_face.png"
+        "color": (0.98, 0.92, 0.81)
     },
     "body": {
         "position": (0, 0, 0),
         "size": (0.75, 1, 0.3),
         "rotation": (0, 0, 0, 0),
         "color": (0.25, 0.79, 0.96),
-        "texture": "./textures/blue_pants.jpeg"
     },
     "left_arm_skin": {
         "position": (-1, 0, -0.5),
@@ -82,13 +81,15 @@ steveAtt = {
         "position": (0.25, -2, -0.5),
         "size": (0.375, 1.2, 0.3),
         "rotation": (45, 0, 0, 0),
-        "color": (0.11, 0.40, 1)
+        "color": (0.11, 0.40, 1),
+        "texture": True
     },
     "left_leg": {
         "position": (-0.25, -2, 0.5),
         "size": (0.375, 1.2, 0.3),
         "rotation": (-45, 0, 0, 0),
-        "color": (0.11, 0.40, 1)
+        "color": (0.11, 0.40, 1),
+        "texture": True
     },
 }
 
@@ -104,25 +105,29 @@ treeAtt = {
         "position": (0, 3, 0),
         "size": (4, 2, 4),
         "rotation": (0, 0, 0, 0),
-        "color": (0.075, 0.50, 0.059)
+        "color": (0.075, 0.50, 0.059),
+        "texture": True
     },
     "leaves_middle": {
         "position": (0, 5, 0),
         "size": (3, 1, 3),
         "rotation": (0, 0, 0, 0),
-        "color": (0.075, 0.50, 0.059)
+        "color": (0.075, 0.50, 0.059),
+        "texture": True
     },
     "leaves_upper1": {
         "position": (0, 6, 0),
         "size": (2, 1, 1),
         "rotation": (0, 0, 0, 0),
-        "color": (0.075, 0.50, 0.059)
+        "color": (0.075, 0.50, 0.059),
+        "texture": True
     },
     "leaves_upper2": {
         "position": (0, 6, 0),
         "size": (1, 1, 2),
         "rotation": (0, 0, 0, 0),
-        "color": (0.075, 0.50, 0.059)
+        "color": (0.075, 0.50, 0.059),
+        "texture": True
     }
 }
 
@@ -132,61 +137,71 @@ mountainAtt = {
         "position": (0, -2, -35),
         "size": (20, 1, 20),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_lower2": {
         "position": (-20, -2, -25),
         "size": (7, 1, 30),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_middle1": {
         "position": (0, -1, -37),
         "size": (18, 1, 18),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_middle2": {
         "position": (-21, -1, -27),
         "size": (5, 1, 28),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_middle3": {
         "position": (0, 0, -39),
         "size": (16, 1, 16),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_middle4": {
         "position": (-21, 0, -30),
         "size": (5, 1, 25),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_upper1": {
         "position": (7, 1, -39),
         "size": (8, 2, 10),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_upper2": {
         "position": (-21, 1, -35),
         "size": (5, 1, 20),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_upper3": {
         "position": (-21, 2, -43),
         "size": (4, 2, 10),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     },
     "floor_upper4": {
         "position": (-21, 4, -43),
         "size": (3, 2, 7),
         "rotation": (0, 0, 0, 0),
-        "color": (0.54, 0.37, 0.27)
+        "color": (0.54, 0.37, 0.27),
+        "texture": True
     }
 }
 
@@ -196,8 +211,7 @@ pigAtt = {
         "position": (0, 0, 0),
         "size": (0.6, 0.6, 0.6),
         "rotation": (0, 0, 0, 0),
-        "color": (0.98, 0.63, 0.58),
-        "texture": "./textures/pink_text.jpeg"
+        "color": (0.98, 0.63, 0.58)
     },
     "nose": {
         "position": (0, -0.2, 0.7),
@@ -209,7 +223,8 @@ pigAtt = {
         "position": (0, -0.1, -1),
         "size": (0.8, 0.5, 1),
         "rotation": (0, 0, 0, 0),
-        "color": (0.98, 0.63, 0.58)
+        "color": (0.98, 0.63, 0.58),
+        "texture": "./textures/pink_text.jpeg"
     },
     "leg_fl": {
         "position": (-0.4, -0.8, -0.3),

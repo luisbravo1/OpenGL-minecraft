@@ -20,12 +20,16 @@ import numpy as np
 
 
 class Object3D:
-    def __init__(self, parts, filename=""):
+    def __init__(self, parts, filename_dict=None):
         self.img = None
-        if filename is not "":
-            self.img = Image.open(filename)
-            self.img = self.img.convert("RGB")
-            self.img_data = np.array(list(self.img.getdata()), np.int8)
+        if filename_dict is not None:
+            self.img = {}
+            self.img_data = {}
+            for part, filename in filename_dict.items():
+                self.img[part] = Image.open(filename)
+                self.img[part] = self.img[part].convert("RGB")
+                self.img_data[part] = np.array(
+                    list(self.img[part].getdata()), np.int8)
         self.parts = parts
         self.vertsTmp = {}
         self.facesTmp = {}
@@ -72,9 +76,8 @@ class Object3D:
         glTranslate(position[0], position[1], position[2])
         for value, part in self.parts.items():
             if 'texture' in part.keys():
-                print(value)
                 self.__text_flags[value] = True
-                self.read_texture()
+                self.read_texture(value)
                 glEnable(GL_TEXTURE_2D)
                 glBindTexture(GL_TEXTURE_2D, self.texture_id[0])
                 qobj = gluNewQuadric()
@@ -94,13 +97,13 @@ class Object3D:
                 for ver in face:
                     glVertex3fv(self.vertsTmp[value][ver])
             glEnd()
+            glDisable(GL_TEXTURE_2D)
             glPopMatrix()
         glPopMatrix()
 
-    def read_texture(self):
+    def read_texture(self, part):
         self.texture_id = [0] * 1
         glGenTextures(1, self.texture_id)
-        print(self.texture_id)
         glBindTexture(GL_TEXTURE_2D, self.texture_id[0])
         glPixelStorei(GL_UNPACK_ALIGNMENT, 1)
         glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP)
@@ -111,5 +114,5 @@ class Object3D:
         glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
         glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL)
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB,
-                     self.img.size[0], self.img.size[1], 0, GL_RGB, GL_UNSIGNED_BYTE, self.img_data)
+                     self.img[part].size[0], self.img[part].size[1], 0, GL_RGB, GL_UNSIGNED_BYTE, self.img_data[part])
         glDisable(GL_TEXTURE_2D)

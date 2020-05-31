@@ -22,17 +22,28 @@ def main():
 
     glTranslatef(0, -10, -80)
 
-    steveObject = Object3D(steveAtt, './textures/steve_face.png')
-    pigObject = Object3D(pigAtt, './textures/pink_text.jpeg')
-    wolfObject = Object3D(wolfAtt)
+    steveObject = Object3D(steveAtt, {
+                           "right_leg": "./textures/blue_pants.jpeg", "left_leg": "./textures/blue_pants.jpeg"})
+    pigObject = Object3D(pigAtt, {"body": './textures/pink_text.jpeg'})
+    wolfObject = Object3D(wolfAtt, {"body": "./textures/fur_texture.png"})
     skeletonObject = Object3D(skeletonAtt)
-    treeObject1 = Object3D(treeAtt)
-    treeObject2 = Object3D(treeAtt)
-    treeObject3 = Object3D(treeAtt)
-    treeObject4 = Object3D(treeAtt)
-    treeObject5 = Object3D(treeAtt)
-    treeObject6 = Object3D(treeAtt)
-    mountainObject = Object3D(mountainAtt)
+    treeObject1 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    treeObject2 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    treeObject3 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    treeObject4 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    treeObject5 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    treeObject6 = Object3D(treeAtt, {"leaves_lower": "./textures/tree.jpeg", "leaves_middle": "./textures/tree.jpeg",
+                                     "leaves_upper1": "./textures/tree.jpeg", "leaves_upper2": "./textures/tree.jpeg"})
+    mountainObject = Object3D(
+        mountainAtt, {"floor_lower1": "./textures/dirt.jpg", "floor_lower2": "./textures/dirt.jpg", "floor_middle1": "./textures/dirt.jpg",
+                      "floor_middle2": "./textures/dirt.jpg", "floor_middle3": "./textures/dirt.jpg", "floor_middle4": "./textures/dirt.jpg",
+                      "floor_upper1": "./textures/dirt.jpg", "floor_upper2": "./textures/dirt.jpg", "floor_upper3": "./textures/dirt.jpg",
+                      "floor_upper4": "./textures/dirt.jpg"})
     glRotatef(20, 2, 3, 0)
     while True:
         for event in pygame.event.get():
